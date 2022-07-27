@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+    <title>Frontend Mentor | Product preview card component</title>
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="./estilos.css">
+</head>
+<body>
+    <section class="tarjeta">
+        <picture class="tarjeta__picture">
+            <source media="(min-width: 900px)" srcset="./images/image-product-desktop.jpg" class="tarjeta__picture__img--mobile">
+
+            <img src="./images/image-product-mobile.jpg" alt="" class="tarjeta__picture__img">
+        </picture>
+
+        <article class="tarjeta__article">
+            <span class="tarjeta__article__preview">PERFUME</span>
+            <h1 class="tarjeta__article__titulo">Gabrielle Essence Eau De Parfum</h1>
+            <p class="tarjeta__article__parrafo">A floral, solar and voluptuous interpretation composed by Olivier Polge, 
+                Perfumer-Creator for the House of CHANEL.</p>
+            <div class="tarjeta__article__precios">
+                <span class="tarjeta__article__precio">$149.99</span>
+                <span class="tarjeta__article__precio--off">
+                    <del>$169.99</del>
+                </span>
+            </div>
+            <button class="btn">
+                <i class='bx bx-cart-add'></i> Add to cart
+            </button>
+        </article>
+    </section>
+</body>
+</html>

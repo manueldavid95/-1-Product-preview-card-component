@@ -1,0 +1,141 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+:root {
+    /* colores primarios */
+    --Dark-cyan: hsl(158, 36%, 37%);
+    --cream: hsl(30, 38%, 92%);
+
+    /* neutral */
+    --very-dark-blue: hsl(212, 21%, 14%);
+    --dark-grayish-blue: hsl(228, 12%, 48%);
+    --blanco: hsl(0, 0%, 100%);
+
+    /* fuentes */
+    --montserrat-fuente:  'Montserrat', sans-serif;;
+    --fraunces-fuente: 'Fraunces', serif;;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+body {
+    padding: 2rem;
+    width: 90%;
+    min-height: 100vh;
+    margin: auto;
+    overflow-x: hidden;
+    display: flex;
+    flex-flow: nowrap column;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    background-color: var(--cream);
+    font-family: var(--montserrat-fuente);
+}
+
+/* estilos para las tarjetas */
+.tarjeta {   
+    width: 100%;
+    min-width: 288px;
+    max-width: 650px;
+    overflow: hidden;
+    border-radius: 1rem;
+    background: var(--blanco);
+}
+
+.tarjeta__picture__img {
+    display: block;
+    width: 100%;
+}
+
+.tarjeta__article {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.tarjeta__article__preview {
+    font-size: 14px;
+    color: var(--dark-grayish-blue);
+}
+
+.tarjeta__article__titulo {
+    font-size: 36px;
+    font-family: var(--fraunces-fuente);
+}
+
+.tarjeta__article__parrafo {
+    color: var(--dark-grayish-blue);
+}
+
+.tarjeta__article__precios {
+    display: flex;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.tarjeta__article__precio {
+    font-family: var(--fraunces-fuente);
+    font-size: 26px;
+    color: var(--Dark-cyan);
+}
+
+.tarjeta__article__precio--off {
+    color: var(--dark-grayish-blue);
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    color: var(--blanco);
+    text-align: center;
+    border-radius: 6px;
+    background-color: var(--Dark-cyan);
+}
+
+.btn i {
+    font-size: 20px;
+}
+
+
+/* media query */
+@media screen and (min-width: 900px) {
+    .tarjeta {
+        display: flex;
+        /* align-items: ; */
+        min-height: 500px;
+    }
+
+    .tarjeta__picture {
+        width: 50%;
+        display: flex;
+    }
+
+    .tarjeta__article {
+        gap: 0;
+        width: 50%;
+        justify-content: space-between;
+    }
+
+    .tarjeta__article__precio {
+        font-size: 36px;
+    }
+}
+
